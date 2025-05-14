@@ -164,3 +164,5 @@ function playTypingSound() {
   // const audio = new Audio('type.mp3');
   // audio.play();
 }
+
+

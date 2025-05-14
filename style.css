@@ -232,3 +232,93 @@ button:hover {
     gap: 16px;
   }
 }
+
+
+.floating-heart {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: floatY 6s ease-in-out infinite, floatX 8s ease-in-out infinite, pulse 3s infinite ease-in-out;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.heart1 {
+  top: 5%;
+  left: 10%;
+  width: 200px;
+  animation-delay: 0s;
+}
+.heart2 {
+  top: 15%;
+  right: 5%;
+  width: 230px;
+  animation-delay: 1s;
+}
+.heart3 {
+  bottom: 10%;
+  left: 15%;
+  width: 190px;
+  animation-delay: 2s;
+}
+.heart4 {
+  bottom: 5%;
+  right: 15%;
+  width: 220px;
+  animation-delay: 3s;
+}
+.heart5 {
+  top: 45%;
+  left: 40%;
+  width: 210px;
+  animation-delay: 4s;
+}
+.heart6 {
+  top: 30%;
+  left: 70%;
+  width: 240px;
+  animation-delay: 2.5s;
+}
+.heart7 {
+  bottom: 25%;
+  right: 30%;
+  width: 200px;
+  animation-delay: 3.5s;
+}
+
+
+/* Bouncy sparkle-y movement */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatX {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-heart {
+    width: 40px !important;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-heart {
+    width: 30px !important;
+    opacity: 0.4;
+  }
+}
