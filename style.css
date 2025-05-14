@@ -29,6 +29,7 @@ body {
   justify-content: center;
   z-index: 1000;
   transition: opacity 0.8s ease, visibility 0.8s ease;
+  gap: 24px;
 }
 #loading-screen.fade-out {
   opacity: 0;
@@ -38,6 +39,8 @@ body {
   font-size: 2.5em;
   color: #d84b80;
   animation: fadeIn 1s ease;
+  max-width: 90vw;
+  text-align: center;
 }
 .loader {
   width: 50px; height: 50px;
@@ -189,7 +192,7 @@ button:hover {
     width: 160px;
     font-size: 0.9rem;
     padding: 14px;
-    bottom: 40px;
+    bottom: 20px;
   }
 
   button {
@@ -218,5 +221,14 @@ button:hover {
 
   .jar-container {
     width: 180px;
+  }
+
+  #loading-screen h1 {
+    font-size: 1.3em;
+    padding: 0 10px;
+  }
+
+  #loading-screen {
+    gap: 16px;
   }
 }
